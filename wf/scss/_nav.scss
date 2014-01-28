@@ -1,0 +1,43 @@
+// nav
+
+.wireframe { 
+	nav {
+		display: none;
+		@include breakpoint($tablet) {
+			width: 100%;
+			display: block;
+			height: auto;
+			margin: 0;
+			padding: 0;
+			border: none;
+			position: relative;
+			}// * BP
+		}// nav
+
+	.menu {
+		@extend .box;
+    position: absolute; 
+    margin: 0;
+    top: 0; 
+    right: 0; 
+    background-color: gainsboro; 
+    padding: 0.5em;
+    color: steelblue;
+    
+   	@include breakpoint($tablet) {
+	    display: none;
+			}// * BP
+
+		}// .menu
+		
+		#footer-nav {
+			display: block;
+				@include breakpoint($tablet) {
+					display: none;
+					}
+			}
+		
+
+}// .wireframe
+
+
