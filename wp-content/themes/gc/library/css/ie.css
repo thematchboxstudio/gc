@@ -2031,7 +2031,7 @@ img.bg {
   background-image: url("../images/texture-red.jpg");
 }
 .button:active {
-  margin-top: 3px;
+  margin-top: 5px;
 }
 
 .button:hover {
@@ -2317,10 +2317,12 @@ SERVICES STYLES
   width: 35%;
   float: left;
   color: #891a33;
+  transition: color .75s;
 }
 
 .more-info-title.active {
   color: #fffcde;
+  transition: color .75s;
 }
 
 .more-info-title p {
@@ -2333,10 +2335,22 @@ SERVICES STYLES
 }
 .no-mediaqueries .more-info-title h5, .no-mediaqueries .more-info-title p {
   display: block;
+  cursor: pointer;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 .no-mediaqueries .more-info-title h5:hover, .no-mediaqueries .more-info-title p:hover {
-  cursor: pointer;
-  opacity: .5;
+  color: #fffcde;
 }
 
 .no-mediaqueries .title-1 {
@@ -2358,6 +2372,7 @@ SERVICES STYLES
 
 .more-info-detail {
   opacity: 0;
+  transition: opacity .75s, height 0;
   height: 0px;
   overflow: hidden;
 }
@@ -2365,6 +2380,7 @@ SERVICES STYLES
 .more-info-detail.active {
   display: block;
   opacity: 1;
+  transition: opacity .75s, height 0;
   height: 100%;
 }
 
@@ -2421,6 +2437,7 @@ SERVICES STYLES
 .more-info-arrow {
   height: 0;
   opacity: 0;
+  transition: opacity .75s, height 0;
 }
 
 .more-info-title.active .more-info-arrow {
@@ -2431,6 +2448,7 @@ SERVICES STYLES
   position: absolute;
   right: -15px;
   top: 16px;
+  transition: opacity .75s, height 0;
 }
 
 .title-1.more-info-title.active .more-info-arrow {
@@ -2729,10 +2747,10 @@ PRODUCT GALLERY STYLES
 
 .gallery-back.active {
   top: 0;
-  -webkit-transition-property: top;
-  -moz-transition-property: top;
-  -o-transition-property: top;
-  transition-property: top;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;

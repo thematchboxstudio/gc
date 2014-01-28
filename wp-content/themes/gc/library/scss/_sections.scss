@@ -277,6 +277,7 @@ SERVICES STYLES
 			height: calc(96% - 100px);
 		 	min-height:785px;
 		 	border-bottom: 15px solid $accent;
+		 	//position: static; // fix for the background flicker issue
 		 	}
 }
 .services{
@@ -442,11 +443,10 @@ SERVICES STYLES
 
 		h5, p{
 			display:block;
+			cursor: pointer;
+			@include hovers(.5s);
 			&:hover{
-
-				cursor:pointer;
-				opacity:.5;
-				transition: opacity .75s;
+				color: $white; 
 			}
 		}
 	}
