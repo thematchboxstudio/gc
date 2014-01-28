@@ -1,0 +1,1320 @@
+
+.section-header{
+	display:block;
+	text-align:center;
+	padding: 3% 4%;
+	cursor: pointer;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		display:none;
+	}
+}
+
+.section-header.show{
+	display:block;
+	color:$black;
+	font-size: 2em;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	display:block;
+	color:$black;
+	font-size: 5em;
+	}
+}
+
+.contact-title{
+	margin-top: 0 !important;
+}
+
+
+.section-title a{
+	text-decoration: none;
+	color:$black;
+	&:hover{
+		color:$black;
+	}
+}
+
+.page-section{
+	overflow:hidden;
+}
+.hover-title{
+	display:none;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		display:block;
+		padding-top:0px;
+		margin-bottom:3.5em;
+	}
+}
+
+.title-arrow{
+	background-image: url('../images/title-arrow.png');
+	width:32px;
+	height:15px;
+	background-size:32px 15px;
+	position: relative;
+
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		bottom:-16px;
+	}
+}
+
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  overflow:hidden;
+
+  /* Set up positioning */
+  top: 0;
+  left: 0;
+  display:none;
+
+}
+
+.headline{
+	display:none;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		display:block;
+		margin-bottom:1.5em;
+	}
+
+}
+
+.button{
+	display:none;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		display:inline;
+		border:none;
+		background:none;
+		color: $black;
+		text-transform: uppercase;
+		padding-right: 3%;
+		margin-right:3%;
+		background-image: url('../images/texture-red.jpg');
+	}
+
+	&:active{
+		margin-top:5px;
+	}
+}
+
+.button:hover{
+	opacity: .65;
+}
+
+.mobile-title{
+	display:block;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		display:none;
+	}
+}
+
+.info-wrap{
+	border-top: none;
+	padding:0;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		width:100%;
+		border-top:15px solid $accent-three;
+		padding-top:1.5em;
+	}
+}
+
+/******************************************************************
+NAV SCROLL PLACEMENT
+******************************************************************/
+
+#services, #equipment, #our-work, #facility, #contact{
+	position: absolute;
+	width:100%;
+	height:5px;
+	top:-38px;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		top:-140px;
+	}
+}
+
+/******************************************************************
+INTRO STYLES
+******************************************************************/
+
+.intro{
+	background:url('../images/temp/intro.jpg') no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.gc, .rb{
+position:relative;
+text-align: center;
+width:75%;
+margin:0 auto;
+	@include breakpoint($phone-landscape) {
+		float: left;
+		width:43%;
+		margin:0 auto;
+	}
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		float: left;
+		top:50%;
+		margin-top:-70px;
+	}
+}
+
+.main-logos img{
+	width:100%;
+}
+.gc{
+	padding-bottom:1.5em;
+	margin-bottom:1.5em;
+	border-bottom:5px solid $white;
+	@include breakpoint($phone-landscape) {
+		border-bottom:none;
+		border-right: 5px solid $white;
+		padding-bottom:0;
+		margin-bottom:0;
+		margin-right:1.5em;
+		padding-right:1.5em;
+		margin-left:5%;
+	}
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	border:none;
+	width:23.0140845%;
+	margin-left:22.6478873%;
+	margin-right: 0.929578809%;
+	}
+}
+
+.rb{
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		width:26.0140845%;
+		margin-right:21.6478873%;
+		margin-left: 2.929578809%;
+	}
+}
+
+.and{
+	display:none;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		display:block;
+		width:2.8168753%;
+		float:left;
+		margin-top:-67px;
+		position: relative;
+		top:50%;
+	}
+}
+#top{
+	position:static;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	position:relative;
+	}
+}
+.main-logos{
+	display:block;
+	z-index:1;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	width:100%;
+	height:55%;
+	position: absolute;
+	margin:auto;
+		@include breakpoint($phone-landscape) {
+			height:13%;
+		}
+		@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+			height:25%;
+		}
+}
+
+.button.scroll-down{
+	display:none;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		position:absolute;
+		display:block;
+		bottom:80px;
+		z-index: 55;
+		background-image:none;
+		color: $white;
+		text-align:center;
+		padding:6px 3%;
+		font-size: 1.5em;
+		margin: 0 auto;
+		left:50%;
+		margin-left: -135px;
+		a{
+			text-decoration: none;
+		}
+	}
+}
+
+.arrow-down {
+	position: absolute;
+	bottom: -25px;
+	right:43%;
+	width: 39px;
+	height: 29px;
+	background: url('../images/scroll-down.png');
+	background-repeat:no-repeat;
+}
+/******************************************************************
+SERVICES STYLES
+******************************************************************/
+
+
+.services-equipment{
+	overflow:hidden;
+	width:100%;
+	border:none;
+		@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+			height:96%;
+			height: calc(96% - 100px);
+		 	min-height:785px;
+		 	border-bottom: 15px solid $accent;
+		 	}
+}
+.services{
+		background-repeat: no-repeat;
+		//background-size: 200%;
+		height:100%;
+		@include breakpoint($tablet) {
+			background-size: 161%;
+		}
+		@include breakpoint($desktop, $no-query: '.no-mediaqueries') {
+			background-size: 100%;
+		}
+
+	/*@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		background-position: center center;
+		background-attachment: scroll;
+	  	-webkit-background-size: cover;
+	 	-moz-background-size: cover;
+	 	-o-background-size: cover;
+	 	background-size: cover;
+	}*/
+}
+.services-hover .close{
+	background-image:url(../images/close-icon.png);
+}
+.section-title{
+	margin:auto;
+	z-index:50;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		position: absolute;
+		top:50%;
+		height:auto;
+	}
+
+}
+
+.section-title .button{
+
+}
+
+.services h2{
+	width:100%;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	}
+}
+
+.services-hover h4{
+	color: $accent;
+}
+.services .close{
+	background-image:url(../images/close-icon.png);
+}
+.services-hover{
+	background-color:$accent-four;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		background-color: $accent-four;
+		background-color:rgba(74, 3, 10, .95);
+		right:-100%;
+		top:0%;
+	}
+}
+
+.services-hover-active{
+	right:0%;
+	top:0%;
+	z-index:400;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	right:0%;
+	top:0%;
+	z-index:400;
+	}
+}
+
+.hover-list{
+	margin-top:2em;
+}
+
+.more-info-details{
+	display:none;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		display:block;
+	}
+}
+
+.more-info-details li{
+	float:none;
+	width:100%;
+	margin-right:0;
+	//list-style-image: url(../images/list-arrow.png);
+	margin-left:1%;
+}
+
+.hover-list-left{
+	float:none;
+	width:100%;
+	margin-right:0;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		width:40%;
+		float:left;
+		margin-right:2%;
+	}
+}
+
+
+.hover-list-right{
+	float:none;
+	width:100%;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		width:52%;
+		float:left;
+	}
+}
+
+.half-circle{
+	@include breakpoint($tablet) {
+		height:70px;
+	    width:151px;
+	    border-radius: 0 0 151px 151px;
+	    -moz-border-radius: 0 0 151px 151px;
+	    -webkit-border-radius: 0 0 151px 151px;
+	    background:$white;
+	}
+	@include breakpoint($desktop, $no-query: '.no-mediaqueries') {
+     height:111px;
+     width:171px;
+     border-radius: 0 0 171px 171px;
+     -moz-border-radius: 0 0 171px 171px;
+     -webkit-border-radius: 0 0 171px 171px;
+     background:$white;
+     behavior: url(../wp-content/themes/gc/library/js/PIE.htc);
+     }
+}
+.info a{
+	text-decoration: none;
+}
+
+.more-info-titles{
+	width:100%;
+	color: $white;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	width:35%;
+	float:left;
+	color: $accent;
+	transition: color .75s;
+	}
+}
+
+.more-info-title.active{
+	color: $white;
+	transition: color .75s;
+}
+
+.more-info-title{
+
+	p{
+		display: none;
+	}
+
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		padding: 1.5em 0;
+		border-bottom:1px solid $accent;
+		position: relative;
+
+		h5, p{
+			display:block;
+			&:hover{
+
+				cursor:pointer;
+				opacity:.5;
+				transition: opacity .75s;
+			}
+		}
+	}
+}
+
+.title-1{
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		padding-top:0;
+	}
+}
+
+.more-info-title.active h5, .more-info-title.active p{
+	&:hover{
+		opacity:1;
+	}
+}
+
+.more-info-details{
+	width:100%;
+	color: $white;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	width:65%;
+	float:left;
+	}
+}
+
+.more-info-detail{
+	opacity:0;
+	transition: opacity .75s, height 0;
+	height: 0px;
+	overflow:hidden;
+}
+
+.more-info-detail.active{
+	display:block;
+	opacity: 1;
+	transition: opacity .75s, height 0;
+	height:100%;
+}
+
+.mobile-more-info{
+	display:block;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	display:none;
+	}
+}
+
+.pdf-button{
+	display:inline-block;
+	padding:2% 4%;
+	font-size: 1.25em;
+	font-weight: 800;
+	letter-spacing: .075em;
+	text-transform: uppercase;
+	text-decoration:none;
+	//background:$white;
+	color: $accent-four;
+	background-color: $white;
+	margin-top:1.5em;
+	@include hovers;
+	&:active{
+		position:relative;
+		top:2px;
+	}
+	&:hover{
+		opacity:  .85;
+	}
+
+	span{
+		text-indent: -9999px;
+		overflow: hidden;
+		display: inline-block;
+		width: 22px;
+		height: 20px;
+		background-image: url('../images/download-icon.png');
+		background-size: 22px 20px;
+		position:relative;
+		top:3px;
+	}
+}
+
+
+.more-info-arrow{
+	height:0;
+	opacity:0;
+	transition: opacity .75s, height 0;
+}
+.more-info-title.active .more-info-arrow{
+	opacity:1;
+	width: 16px;
+	height: 76px;
+	background-image:url('../images/more-info-arrow.png');
+	position: absolute;
+	right:-15px;
+	top:16px;
+	transition: opacity .75s, height 0;
+}
+
+.title-1.more-info-title.active .more-info-arrow{
+	top:-8px;
+}
+
+.services-hover .info-wrap{
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		border-top: 15px solid $accent;
+	}
+}
+/******************************************************************
+EQUIPMENT STYLES
+******************************************************************/
+.equipment{
+	background:url('../images/temp/equipment.jpg') no-repeat top right;
+	background-size: 202%;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		background:url('../images/temp/equipment.jpg') no-repeat center center scroll;
+	  	-webkit-background-size: cover;
+	 	 -moz-background-size: cover;
+	 	 -o-background-size: cover;
+	 	 background-size: cover;
+	}
+}
+
+.equipment h2{
+	width:100%;
+	background-image: url('../images/texture-tan.jpg');
+}
+
+.equipment .section-title{
+	@include breakpoint($tablet) {
+		width:429px;
+	}
+	@include breakpoint($desktop, $no-query: '.no-mediaqueries') {
+		width:623px;
+	}
+}
+.info-hover{
+	width:100%;
+	height:100%;
+	position:static;
+	padding:2em 2em;
+	padding-bottom:1.5em;
+	overflow:hidden;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	padding:4%;
+	z-index:901;
+	position:absolute;
+	padding-bottom: 0;
+	@include slide;
+	}
+}
+
+
+
+.equipment-hover{
+	background-color: $accent-six;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	background-color: $accent-six;
+	background-color:rgba(90, 74, 66, .95);
+	left:0%;
+	top:-100%;
+	}
+}
+
+.services-hover .hover-copy{
+	border-style: solid;
+border-width: 0px 0px 12px;
+-moz-border-image: url(../images/dotted-border-red.png) 35 37 36 repeat;
+-webkit-border-image: url(../images/dotted-border-red.png) 35 37 36 repeat;
+-o-border-image: url(../images/dotted-border-red.png) 35 37 36 repeat;
+border-image: url(../images/dotted-border-red.png) 35 37 36 fill repeat;
+}
+
+.info{
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	padding:0;
+	}
+}
+
+.more-info-details ul{
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	margin-left: 11%;
+	margin-top:4px;
+	}
+
+}
+
+.services .mobile-title{
+	background-image: url('../images/texture-red.jpg');
+}
+
+/******************************************************************
+PRODUCT GALLERY STYLES
+******************************************************************/
+
+
+
+.product-gallery h4{
+	color: $accent-three;
+}
+
+.product-gallery{
+	clear:left;
+	height:auto;
+	position: relative;
+	height:auto;
+	overflow:hidden;
+	border:none;
+
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		height:96%;
+		height: calc(96% - 100px);
+		min-height:700px;
+		border-bottom: 15px solid $accent-three;
+	}
+}
+
+
+
+.product-gallery .hover-list-left{
+
+	ul{
+		margin-bottom:1em;
+		clear:both;
+	}
+
+	li{
+		width:100%;
+		float:none;
+		@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+			width:48%;
+			margin-right:2%;
+			float:left;
+		}
+	}
+
+	h5{
+		clear:both;
+	}
+}
+
+.product-gallery .hover-list-right {
+
+	width:100%;
+	float:none;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		width:56%;
+		margin-right:2%;
+		float:left;
+	}
+
+	li{
+		width:100%;
+		float:none;
+		@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+			width:30%;
+			float:left;
+			margin-right:2%;
+		}
+	}
+}
+
+.slide{
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	height:100%;
+	@include breakpoint($tablet) {
+	background-repeat: no-repeat;
+	//background-position:center center;
+	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+ 	-o-background-size: cover;
+ 	//background-size: cover !important;
+	//background-attachment:scroll !important;
+	//background-position: center center !important;
+	height:100%;
+	width:100%;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<?php echo $background_image; ?>', sizingMethod='scale');
+	-ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<?php echo $background_image; ?>', sizingMethod='scale');
+	}
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		height:100%;
+	}
+}
+
+.dummy{
+	width:100%;
+	@include breakpoint($tablet) {
+	}
+	@include breakpoint($desktop, $no-query: '.no-mediaqueries') {
+		height:100%;
+	}
+}
+.gallery-rotator{
+	height:auto;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		height:100%;
+	}
+}
+
+
+
+.section-title.active{
+	display:none;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	left:6%;
+	@include slide;
+	display:block;
+	}
+}
+
+.section-title{
+	left:-100%;
+	@include slide;
+}
+
+.product-gallery.active, .facility.active {
+
+	@include slide;
+	.previous{
+		left: 0px;
+		@include slide;
+	}
+
+	.next{
+		right:0px;
+		@include slide;
+	}
+	.slide-info-wrap{
+		top:0px;
+		@include slide;
+	}
+
+}
+
+.gallery-back{
+	display:none;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	display:block;
+	position:absolute;
+	right:0;
+	top:-61px;
+	z-index: 50;
+	cursor:pointer;
+	margin-right:0;
+	padding:1.01em;
+	@include slide;
+	}
+}
+
+.gallery-back.active{
+	top:0;
+	@include slide;
+}
+
+
+.gallery-activate{
+	display:none;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		z-index: 50;
+		display:inline;
+	}
+}
+
+.product-gallery .gallery-back{
+	background-image: url('../images/texture-orange.jpg');
+}
+
+.product-gallery .button{
+	z-index: 50;
+	background-image: url('../images/texture-orange.jpg');
+
+}
+
+.more-info-type{
+	position: relative;
+	top:6px;
+	text-align:center;
+	@include breakpoint($desktop, $no-query: '.no-mediaqueries') {
+		top:46px;
+	}
+}
+
+.button-arrow{
+	position: relative;
+	left:50%;
+	margin-left:-24px;
+	z-index: 5;
+	top:8px;
+	background-image: url(../images/button-arrow.png);
+	width:48px;
+	height:24px;
+	background-size:48px 24px;
+	@include breakpoint($desktop, $no-query: '.no-mediaqueries') {
+		top:46px;
+	}
+}
+
+.button-wrap{
+	display:none;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		display: inline;
+		width:100%;
+		padding: 10px 30px;
+
+	}
+}
+
+.last-button{
+	padding:0;
+	margin:0;
+}
+
+.services .button-wrap{
+	background-image: url('../images/texture-red.jpg');
+}
+.product-gallery .button-wrap{
+	background-image: url('../images/texture-orange.jpg');
+}
+.facility .button-wrap{
+	background-image: url('../images/texture-blue.jpg');
+}
+
+.facility .more-info, .product-gallery .more-info{
+	border-right: 1px solid $black;
+}
+
+
+
+
+.product-gallery .hover-copy{
+	border-style: solid;
+border-width: 0px 0px 12px;
+-moz-border-image: url(../images/dotted-border-orange.png) 35 37 36 repeat;
+-webkit-border-image: url(../images/dotted-border-orange.png) 35 37 36 repeat;
+-o-border-image: url(../images/dotted-border-orange.png) 35 37 36 repeat;
+border-image: url(../images/dotted-border-orange.png) 35 37 36 fill repeat;
+}
+
+
+.slider{
+	position:relative;
+	width:100%;
+}
+
+.slide{
+	width:100%;
+}
+
+.slider div{
+	display:block;
+}
+
+.rotator img{
+	width:100%;
+}
+
+.arrow-buttons{
+	position: absolute;
+	z-index: 50;
+}
+
+.product-gallery-more-info{
+	background-color:$accent-three;
+	color:$white;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		position: absolute;
+		padding:4%;
+		background-color: $accent-eight;
+		background-color:rgba(135, 51, 0, .95);
+		top: 0%;
+		right:-100%;
+		width:100%;
+		z-index: 60;
+		height: 100%;
+		@include slide;
+	}
+}
+
+.gallery-info{
+	padding:10%;
+	margin-top:-2px;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		padding:10% 0% 0% 0%;
+		margin-top:0;
+	}
+}
+
+.close{
+	display:none;
+
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	display:block;
+	float:right;
+	width:60px;
+	height:60px;
+	background-image:url(../images/close-icon.png);
+	text-indent:9999px;
+	overflow:hidden;
+	cursor:pointer;
+	margin-top:-10px;
+	}
+
+	&:active{
+		margin-top:-7px;
+	}
+}
+
+.product-gallery .close{
+	background-image:url(../images/close-icon.png);
+}
+
+.facility .close{
+	background-image:url(../images/close-icon.png);
+}
+
+.arrow-buttons a{
+	display:block;
+	width:100%;
+	height:100%;
+}
+
+.next, .previous{
+	text-indent:9999px;
+	overflow:hidden;
+	height:52px;
+	width:26px;
+	background-size:52px 52px;
+	cursor:pointer;
+	background-image:url(../images/rotator-arrows-orange.png);
+	top:50%;
+	margin-top:-26px;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		background-size:103px 103px;
+		height:103px;
+		width:52px;
+		margin-top:-52px;
+		@include slide;
+	}
+}
+
+
+
+.next{
+	background-position: 0px 0px;
+	right:0;
+
+	&:active{
+		right:-2px;
+	}
+	&:hover{
+		opacity:.8;
+	}
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	right:-52px;
+	}
+}
+
+.previous{
+	background-position: 26px 0px;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		background-position: 52px 0px;
+	}
+	&:active{
+		left: -2px;
+	}
+	&:hover{
+		opacity:.8;
+	}
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	left:-52px;
+	}
+}
+
+.slide-info-wrap{
+	position: absolute;
+	width:100%;
+	bottom: 0px;
+	@include slide;
+}
+
+.slide-info-wrap.active{
+	top:0;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	top: -61px;
+	}
+}
+
+
+
+.slide-info{
+	position: relative;
+	width:100%;
+	background-color:$black;
+	background-color:rgba(0, 0, 0, .3);
+	padding:.65em;
+	top: 70px;
+	@include slide;
+
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		padding:.95em;
+		padding-left: 3em;
+		padding-right: 100px;
+
+	}
+	h3{
+		display:inline;
+		color: $accent-three;
+		text-transform: uppercase;
+		font-weight: 800;
+		letter-spacing: .065em;
+	}
+	h6{
+		font-family: $sans-serif;
+		display:inline;
+		letter-spacing: 0.05em;
+		color: $white;
+		text-transform: uppercase;
+		font-size: 1em;
+		font-weight:400;
+	}
+}
+
+.slide-info-wrap.active .slide-info{
+	top:0px;
+}
+
+
+.slide-info-wrap.active .hide{
+	bottom:100%;
+}
+
+.hide p{
+    text-align: center;
+    top: 19px;
+    left: -47px;
+    position: relative;
+    width: 93px;
+    height: 93px;
+    margin: 0px;
+    color:$white;
+    text-transform: uppercase;
+    font-size:.75em;
+    font-weight: 800;
+}
+
+
+.product-gallery .gallery-back{
+	color:$black;
+	background-color:$accent-three;
+	padding:1.01em;
+}
+
+.product-gallery .button-arrow{
+	background-image: url('../images/button-arrow-orange.png');
+}
+
+.product-gallery {
+
+	.full-width-copy{
+		border-color: $accent-eight;
+		@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+			border:none;
+		}
+	}
+
+	.more-info-title{
+		border:none;
+		@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+			border-bottom: 1px solid $accent-three;
+		}
+	}
+	.more-info-titles{
+		color: $white;
+		@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+			color: $accent-three;
+		}
+	}
+
+}
+
+.product-gallery .mobile-title{
+	background-image:url('../images/texture-orange.jpg');
+}
+
+
+/******************************************************************
+FACILITY STYLES
+******************************************************************/
+
+.facility{
+	border:none;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		height:96%;
+		height: calc(96% - 100px);
+		min-height:700px;
+		border-bottom: 15px solid $accent-two;
+	}
+}
+
+.facility-rotator{
+	height:100%;
+}
+
+.facility h2{
+	z-index:60;
+}
+
+.facility h4{
+	color: $accent-two;
+}
+
+.facility-next{
+	background-image:url(../images/rotator-arrows-blue.png);
+}
+
+.facility-previous{
+	background-image:url(../images/rotator-arrows-blue.png);
+}
+
+.facility-more-info{
+	background-color:$accent-seven;
+	color:$white;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		position: absolute;
+		padding:4%;
+		color: $white;
+		background-color:$accent-seven;
+		background-color:rgba(0, 130, 134, .95);
+		top: 0%;
+		right:-100%;
+		width:100%;
+		z-index: 60;
+		height: 100%;
+		@include slide;
+	}
+}
+
+.facility .button{
+	background-image: url('../images/texture-blue.jpg');
+}
+
+.facility .button-arrow{
+	background-image: url('../images/button-arrow-blue.png');
+}
+
+
+.facility .gallery-back{
+	color:$black;
+	background-color:$accent-two;
+	padding:1.01em;
+	background-image: url('../images/texture-blue.jpg');
+	margin-right: 0;
+}
+
+.facility .mobile-title{
+	background-image:url('../images/texture-blue.jpg');
+}
+
+.gallery-info-active, .facility-info-active{
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		top:0%;
+		right:0%;
+	}
+}
+
+.facility .full-width-copy{
+	border-color: $accent-seven;
+
+}
+
+.facility .hover-copy{
+	width:100%;
+	@include breakpoint($tablet) {
+		width:75%;
+	}
+	@include breakpoint($desktop, $no-query: '.no-mediaqueries') {
+		width:40%;
+	}
+}
+
+.facility .two-thirds{
+	width:100%;
+		@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		border-bottom: 15px solid $accent-two;
+	}
+}
+
+/******************************************************************
+CONTACT STYLES
+******************************************************************/
+
+.contact{
+	height:700px;
+	top:-2px;
+		@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+			height:525px;
+			top:0;
+		}
+}
+.contact h2{
+	background-image: url('../images/texture-tan.jpg');
+}
+
+.contact-title{
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	position:absolute;
+	top:0;
+	right:0;
+	}
+}
+
+.contact .section-title{
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	width:50%;
+	left: auto;
+	bottom:auto;
+	}
+}
+.contact-info{
+	position:static;
+	padding:10%;
+	z-index: 50;
+	width:100%;
+	float:right;
+	background: $accent-five;
+	color: $white;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	padding-top:170px;
+	padding-left:4%;
+	width: 50%;
+	}
+}
+
+
+
+.two-thirds{
+	width:100%;
+	@include breakpoint($desktop, $no-query: '.no-mediaqueries') {
+		width:78%;
+	}
+}
+
+.googleMap{
+	width:100%;
+	height:450px;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		height:525px;
+		width:50%;
+		z-index:50;
+	}
+}
+
+.short-window{
+
+	.more-info-details .long li{
+		width: 49%;
+		float:left;
+	}
+}
+
+.scrolleffect{
+@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		background-position: center center !important;
+		background-attachment: fixed;
+	  	-webkit-background-size: cover !important;
+	 	-moz-background-size: cover !important;
+	 	-o-background-size: cover !important;
+	 	background-size: cover !important;
+		background-repeat: no-repeat;
+}
+}

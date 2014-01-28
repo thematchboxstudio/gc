@@ -1,0 +1,42 @@
+// START HERE
+@import "compass";
+// import normalize
+@import "normalize";
+@import "breakpoint";
+//$breakpoint-no-query-wrappers: true;
+// import mixins
+@import "mixins";
+
+// styles in base.scss
+@import "animations";
+@import "base";
+@import "header";
+@import "nav";
+@import "footer";
+@import "sidebars-widgets";
+@import "interior";
+@import "sections";
+@import "wufoo";
+@import "typography";
+@import "fallbacks";
+
+
+
+// RETINA (2x RESOLUTION DEVICES)
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+	// styles in 2x.scss
+	@import "2x";
+
+} // end of media query
+
+// iPHONE 5 MEDIA QUERY
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  // iPhone 5 or iPod Touch 5th generation styles (you can include your own file if you want)
+}
+
+// PRINT STYLESHEET
+@media print {
+	@import "print";
+}

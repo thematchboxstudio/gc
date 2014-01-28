@@ -1,0 +1,116 @@
+// WUFOO Styles
+
+
+/* wufoo contact form */
+.wufoo input.text, 
+.wufoo textarea.textarea, 
+.wufoo input.file, 
+.wufoo select.select,
+form li {
+box-sizing: border-box;
+}
+.embed #header {
+width: 100%;
+}
+body#public, #container, html.embed {
+background-image: none;
+background: transparent;
+}
+form#form1 #header, .wufoo .info h2, .wufoo .info, .wufoo .paging-context{
+display: none;
+}
+.wufoo .info, .wufoo .paging-context{
+border-bottom: medium none;
+}
+.wufoo label.desc{
+font-weight: 300;
+@include font-size(1, normal);
+}
+
+form span.req{color: #e57010!important;}
+
+form ul{
+	//margin-top: 2px;
+	}
+
+form li{
+	//margin: 0 0 18px;
+	}
+
+textarea.textarea {
+width: 100%;
+}
+
+input.medium, 
+select.medium, 
+input.large, 
+select.large, 
+textarea.textarea{
+width: 100%;
+margin-top: 3px;
+}
+
+input.medium, select.medium, .ln, .fn, .text{
+height: 26px;
+}
+
+input.large, select.large, textarea.textarea{height: 262px;}
+
+textarea.small{height: 75px;}
+
+form li.buttons{margin:0;}
+
+form.wufoo{padding-bottom: 0; background: transparent;}
+
+input.text, input.search, textarea.textarea{
+background:none repeat scroll 0 0 #fff;
+border: 1px solid #C7C9CA !important;
+}
+.wufoo li.focused{background-color:  #f6f6f6;border: 1px solid #ededed;}
+form input:focus{background-color: #fff;}
+
+.noI form li, .altInstruct form li{border: 1px solid #fff;}
+.fn{margin-right: 10px !important;}
+
+.wufoo input.btTxt{
+	height: auto;
+	-webkit-appearance: none;
+	background: $accent;
+	border: none;
+	color: $white;
+	margin: $margin 0;
+	padding: $marginhalf 0;
+	position: relative;
+	text-transform: uppercase;
+	@include font-size(1, normal);
+		&:hover {
+			background: $black;
+			}
+}
+
+input.btTxt{}
+form li.buttons input{}
+
+.embed .confirm h2{float:left;
+font-family:"Clarendon URW Medium",Clarendon,'Century Schoolbook',Georgia,serif;
+font-style:italic;
+margin-left:0;
+margin-top:0;
+padding-top:5px;
+text-transform:inherit;
+text-align:left;}
+
+
+.wufoo form li div label, form li span label {
+font-size: .625em;
+}
+
+.wufoo .phone::before {
+content: "";
+text-transform: none;
+}
+.wufoo .phone {
+padding: 6px 1% 9px 1%
+}
+/* end wufoo contact form */
+

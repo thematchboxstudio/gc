@@ -1,0 +1,255 @@
+/*********************
+NAVIGATION STYLES
+*********************/
+
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+
+.navigation {
+	float: left;
+	clear: both;
+	width: 100%;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		float: none;
+		clear: none;
+		width: auto;
+		}// * BP
+	
+	}
+
+.nav {
+	border-bottom: 0;
+	margin: 0;
+	width:100%;
+	
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		border: 0;
+		float:right;
+		margin: 14px 3% 27px 0;
+		width:auto;
+		}// * BP
+
+	li {
+		background-color:$black;
+		text-align:center;
+		width:50%;
+		float:left;
+		@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+			background-color:transparent;
+			width:auto;
+			float: left;
+			position: relative;
+			z-index:50;
+			}// * BP
+
+		a {
+			display: block;
+			text-decoration: none;
+			padding: 5px 10px;
+			border-bottom: 1px solid #404040;
+			
+				@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+					border-bottom: 0;
+					}// * BP
+
+			/*
+			remember this is for mobile ONLY, so there's no need
+			to even declare hover styles here, you can do it in
+			the style.scss file where it's relevant. We want to
+			keep this file as small as possible!
+			*/
+			&:hover, &:focus {
+			
+				@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+					}// * BP
+			
+			}
+		}
+
+		&:first-child {}
+
+		&:last-child {}
+
+		/*
+		so you really have to rethink your dropdowns for mobile.
+		you don't want to have it expand too much because the
+		screen is so small. How you manage your menu should
+		depend on the project. Here's some great info on it:
+		http://www.alistapart.com/articles/organizing-mobile/
+		*/
+		ul.sub-menu,
+		ul.children {
+			
+			@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+				margin: 0;
+				width: auto;//200px;
+				border: 1px solid #ccc;
+				border-top: 0;
+				position: absolute;
+				display: none;
+				z-index: 8999;
+				}// * BP
+		
+		
+			li {
+
+				a {
+					padding-left: 30px;
+
+					@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+						padding-left: 10px;
+						border-right: 0;
+						display: block;
+						width: 180px;
+						border-bottom: 1px solid #ccc;
+						}// * BP
+							
+					&:hover,
+					&:focus {}
+
+					&:link {}
+
+				}// a
+
+				&:first-child {}
+
+				&:last-child {
+					@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+						border-bottom: 0;
+						}
+				
+				}
+
+			}// li
+			
+			/* highlight sub-menu current page */
+			li.current-menu-item,
+			li.current_page_item,
+			li.current-page-ancestor {
+				a {
+					}
+			}
+		
+		}// children
+		
+		/* showing sub-menus */
+		&:hover ul {
+		
+			@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+				top: auto;
+				display: block;
+				}// * BP
+		
+		}
+
+
+	} /* end .menu li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current-page-ancestor {
+
+		a {
+			}
+
+	}  /* end current highlighters */
+
+} /* end .nav */
+
+.nav{
+	position:fixed;
+	top:-63px;
+	z-index:9999;
+	@include slide;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		-moz-transition: none;
+	    -webkit-transition: none;
+	    -o-transition: color 0 ease-in;
+	    transition: none;
+		position:static;
+	}
+}
+
+.nav.active{
+	top:0px;
+	@include slide;
+}
+
+.menu-button{
+	position:fixed;
+	margin:0 auto;
+	width:100%;
+	background-color:$accent-four;
+	border-bottom:1px solid $accent;
+	height:40px;
+	border:none;
+	top:0;
+	z-index:9999;
+	@include slide;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		display:none;
+		-moz-transition: none;
+	    -webkit-transition: none;
+	    -o-transition: color 0 ease-in;
+	    transition: none;
+	}
+}
+
+
+.menu-button-type{
+	text-indent:9999px;
+	overflow:hidden;
+	width:31px;
+	height:20px;
+	background:url(../images/menu-button.png) no-repeat;
+	margin: 0 auto;
+	margin-top: 9px;
+}
+.active-button{
+	position:fixed;
+	top:63px;
+	@include slide;
+}
+
+
+
+.nav_section1.active a, .nav_section1 a:hover{
+	background:$accent;
+	color:$black;
+}
+
+.nav_section2.active a,.nav_section2 a:hover{
+	background:$accent-three;
+	color:$black;
+}
+
+.nav_section3.active a,.nav_section3 a:hover{
+	background:$accent-two;
+	color:$black;
+}
+
+.nav_section4.active a,.nav_section4 a:hover{
+	background:$accent-five;
+	color:$black;
+}
+
+.nav-highlight-target{
+	display:block;
+	position:relative;
+	top:50%;
+}
+
+.nav li.active a{
+	color:$black;
+}
+
+.nav-target{
+	text-indent: -99999px;
+	overflow:hidden;
+}

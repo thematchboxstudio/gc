@@ -1,0 +1,136 @@
+h2{
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size:2em;
+	letter-spacing: .055em;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		color:$white;
+		font-size:5.5em;
+	}
+	@include breakpoint(60em) {
+		font-size:6em;
+	}
+	@include breakpoint($desktop) {
+	font-size:7em;
+	}
+	@include breakpoint(90em) {
+	font-size:8em;
+	}
+	@include breakpoint(105em) {
+		font-size:9em;
+	}
+}
+
+.hover-copy p{
+	margin-top:0;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		margin-bottom:0.5em;
+		padding-bottom:1em;
+	}
+}
+
+.more-info-details li{
+	font-family:$sans-serif;
+	//font-style: italic;
+	text-transform:uppercase;
+	line-height:1;
+	margin-bottom:1em;
+	font-size:.95em;
+}
+
+.more-info-title p{
+	margin: 0;
+	font-family: $serif;
+	text-transform: uppercase;
+	font-style:italic;
+}
+h3{
+	text-transform:uppercase;
+	padding:4px;
+	font-weight:600;
+	font-size:1.5em;
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	font-size: 2em
+	}
+}
+h4{
+	text-transform: uppercase;
+	font-size:1.65em;
+	padding:12px;
+	width:auto;
+	display:block;
+	font-weight:800;
+		@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+			padding:0;
+			display:inline;
+			font-size:7.5em;
+			letter-spacing: .055em;
+		}
+}
+
+h5{
+	font-weight:800;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	@include breakpoint($tablet) {
+		font-size: 2em;
+	}
+	@include breakpoint($desktop, $no-query: '.no-mediaqueries') {
+		font-size: 2.2em;
+	}
+	strong {
+		font-weight:800;
+	}
+}
+
+.button{
+	font-family: $sans-serif;
+	font-weight:800;
+}
+
+.button.more-info, .button.gallery-activate{
+	font-size: 1.2em;
+}
+
+nav a{
+	font-weight:800;
+	text-transform: uppercase;
+	letter-spacing: 0.105em;
+	font-size: .85em;
+}
+
+.slide-info{
+	h3{
+		font-size: .75em;
+		@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+			font-size: 1.5em;
+		}
+	}
+
+	h6{
+		font-size: .75em;
+		@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+			font-size: 1.1em;
+		}
+	}
+}
+
+.full-width-copy{
+	color:$white;
+	width:100%;
+	margin:0 0 1.5em 0;
+	border-bottom: 3px solid $accent;
+	@include breakpoint($tablet) {
+	border:none;
+	width:35%;
+	}
+}
+
+.short-window .full-width-copy{
+	@include breakpoint($tablet) {
+	 width:35%;
+	}
+	@include breakpoint($desktop, $no-query: '.no-mediaqueries') {
+	width:35%;
+	}
+}

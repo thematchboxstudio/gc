@@ -1,0 +1,37 @@
+.no-borderimage{
+	.hover-copy{
+		border-width: 0px 0px 3px;
+		p{
+			border-width: 9px 0px 0px;
+		}
+	}
+}
+
+.no-backgroundsize{
+
+	img.bg{
+		display:block;
+	}
+
+	.services, .services img.bg{
+		min-height:1100px;
+	}
+	.product-gallery, .gallery-rotator, .slide, .product-gallery img.bg{
+		min-height:865px;
+	}
+	.page-section{
+		background-image:none;
+	}
+}
+
+.lt-ie9{
+	/*
+	.more-info{
+		display:none;
+	}
+
+	.section-header{
+		cursor: auto !important ;
+	}
+	*/
+}
