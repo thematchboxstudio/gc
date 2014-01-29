@@ -86,7 +86,7 @@ get_header(); ?>
 														<div class="mobile-more-info">
 															<?php echo $more_info_details; ?>
 														</div>
-														<?php /*<div class="more-info-arrow"></div> */?>
+														<?php //<div class="more-info-arrow"></div> ?>
 													</div>
 
 													<?php $counter++; ?>
@@ -198,7 +198,7 @@ get_header(); ?>
 																	<div class="mobile-more-info">
 																		<?php echo $more_info_details; ?>
 																	</div>
-																	<?php /*<div class="more-info-arrow"></div> */?>
+																	<?php //<div class="more-info-arrow"></div> ?>
 																</div>
 
 																<?php $counter++; ?>
@@ -354,21 +354,21 @@ get_header(); ?>
 
 						<?php get_footer(); ?>
 			
-				    </div> <!-- end #main -->
+				    </div><?php // end #main ?>
 				    
-				</div> <!-- end #inner-content -->
+				</div> <?php //  end #inner-content ?>
     
-			</div> <!-- end #content -->
+			</div><?php //  end #content ?>
 
 
 
-		</div> <!-- end #container -->
+		</div> <?php // end #container ?>
 
-		<!-- all js scripts are loaded in library/bones.php -->
+		 <?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>
 	</div>
 
 	</body>
 
-</html> <!-- end page. what a ride! -->
+</html><?php //  end page. what a ride! ?>
 
