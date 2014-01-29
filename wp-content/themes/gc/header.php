@@ -10,15 +10,12 @@
 
 		<title><?php bloginfo('name');?></title>
 
-		<!-- Google Chrome Frame for IE -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<!-- mobile meta (hooray!) -->
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-		<!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
 		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
 		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 		<!--[if IE]>
@@ -46,12 +43,7 @@
 
   	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
-		<!-- end of wordpress head -->
-
-		<!-- drop Google Analytics Here -->
-		<!-- end analytics -->
 
 	</head>
 
@@ -77,13 +69,7 @@
 						<a href="#top"><div class="header-logos"></div></a>
 					</div>
 
-					<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p>
-					<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p> -->
+				</div><?php // end #inner-header ?>
 
-					<!-- if you'd like to use the site description you can un-comment it below -->
-					<?php // bloginfo('description'); ?>
-
-				</div> <!-- end #inner-header -->
-
-			</header> <!-- end header -->
+			</header><?php // end header ?>
 			<div class="container-wrap">
