@@ -166,7 +166,7 @@ and more scalable.
 	position:fixed;
 	top:-63px;
 	z-index:9999;
-	@include slide;
+	@include hovers(.5s);
 	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
 		-moz-transition: none;
 	    -webkit-transition: none;
@@ -178,7 +178,7 @@ and more scalable.
 
 .nav.active{
 	top:0px;
-	@include slide;
+	@include hovers(.5s);
 }
 
 .menu-button{
@@ -191,7 +191,7 @@ and more scalable.
 	border:none;
 	top:0;
 	z-index:9999;
-	@include slide;
+	@include hovers(.5s);
 	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
 		display:none;
 		-moz-transition: none;
@@ -207,14 +207,14 @@ and more scalable.
 	overflow:hidden;
 	width:31px;
 	height:20px;
-	background:url(../images/menu-button.png) no-repeat;
+	background: image-url("menu-button.png") no-repeat;
 	margin: 0 auto;
 	margin-top: 9px;
 }
 .active-button{
 	position:fixed;
 	top:63px;
-	@include slide;
+	@include hovers(.5s);
 }
 
 

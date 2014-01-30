@@ -1,3 +1,24 @@
+// These can be included where the original elements are. Not sure it's worth it for this job, to go in and add them in,
+// just good to know for future reference.
+
+// So for example: 
+
+//    .hover-copy {
+// 	   your regular styles
+// 	   p {
+// 		   your regular styles
+// 		   }
+		
+//    .no-borderimage & {
+// 	   border-width: 0 0 3px;
+// 		   p {
+// 			   border-width: 9px 0 0;
+// 			   }
+// 	   }// .no-borderimage
+
+//    }// .hover-copy
+
+
 .no-borderimage{
 	.hover-copy{
 		border-width: 0px 0px 3px;

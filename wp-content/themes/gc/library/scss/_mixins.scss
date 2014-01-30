@@ -166,23 +166,7 @@ USAGE: @include transition(all 0.2s ease-in-out);
   @include transition-timing-function($function);
 }
 
-@mixin slide($time:.5s, $function: ease-in-out) {
-  @include transition-property(all);
-  @include transition-duration($time);
-  @include transition-timing-function($function);
-}
 
-@mixin button-slide($time:.25s, $function: ease-in-out) {
-  @include transition-property(all);
-  @include transition-duration($time);
-  @include transition-timing-function($function);
-}
-
-@mixin no-animation($time:0s, $function: ease-in-out) {
-  @include transition-property(all);
-  @include transition-duration($time);
-  @include transition-timing-function($function);
-}
 // Fade In add classes 'fade-in'
 /* make keyframes that tell the start state and the end state of our object */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -245,6 +229,42 @@ probably best not to use it. I mean, were you going to anyway? */
 	-moz-box-sizing:    $type;
 	-ms-box-sizing:     $type;
 	box-sizing:         $type;
+}
+
+
+/*********************
+REM FALLBACK
+*********************/
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@mixin rem-fallback($property, $values...) {
+  $max: length($values);
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $pxValues: #{$pxValues + $value*16}px;
+
+    @if $i < $max {
+      $pxValues: #{$pxValues + " "};
+    }
+  } 
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $remValues: #{$remValues + $value}rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+    }
+  } 
+  
+  #{$property}: $pxValues; 
+  #{$property}: $remValues; 
 }
 
 

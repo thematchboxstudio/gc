@@ -57,13 +57,9 @@
 
 					<nav role="navigation" class="drawer st-menu st-effect-1 navigation" id="menu-1">
 						<?php bones_main_nav(); ?>
-
 					</nav>
 
-
 					<div class="menu-button"><a href="<?php echo home_url(); ?>/#intro-copy"><div class="menu-button-type">Menu</div></a></div>
-
-
 
 					<div class="header-logos-desktop ">
 						<a href="#top"><div class="header-logos"></div></a>
