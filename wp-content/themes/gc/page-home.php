@@ -229,10 +229,6 @@ get_header(); ?>
 
 					    <?php }} ?>
 
-
-
-
-
 					    <?php if(get_field('section_4') ){
 							while( has_sub_field('section_4') ) {
 								$title = get_sub_field('title_4');
@@ -360,10 +356,7 @@ get_header(); ?>
     
 			</div><?php //  end #content ?>
 
-
-
 		</div> <?php // end #container ?>
-
 		 <?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>
 	</div>
